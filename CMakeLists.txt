@@ -25,7 +25,8 @@ endif()
 configure_file(rppmConfig.h.in rppmConfig.h)
 
 # add the executable
-add_executable(${CMAKE_PROJECT_NAME} main.cpp)
+add_executable(${CMAKE_PROJECT_NAME} main.cpp) 
+# add_executable(${CMAKE_PROJECT_NAME} main.cpp dep1.cpp dep2.cpp) # adding dependent executables : Step0 
 # add_executable(temp temp.cpp) #example to add new executable : Step1
 
 

@@ -17,7 +17,7 @@
 ## Project Structure
 ### Zero Files/Dirs :
 * **`main.cpp` file :** Your C++ file.
-* **`rppmConfig.h.in` directory :** Configuration file of the project.
+* **`rppmConfig.h.in` file :** Configuration file of the project.
 
 
 ### Created Files/Dirs :
@@ -54,3 +54,12 @@ target_include_directories(temp PUBLIC "${PROJECT_BINARY_DIR}")
 # Step 3 : install the executable (CMakeLists.txt line:41)
 install(TARGETS temp DESTINATION bin)
 ```
+
+
+## Extra Info
+
+* If your executables dependen to each other just add them like below and yo do not have to change anything else : 
+    ```
+        # adding dependent executables : Step0
+        add_executable(${CMAKE_PROJECT_NAME} main.cpp dep1.cpp dep2.cpp)  
+    ```
