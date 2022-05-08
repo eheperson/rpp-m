@@ -60,6 +60,6 @@ install(TARGETS temp DESTINATION bin)
 
 * If your executables dependen to each other just add them like below and yo do not have to change anything else : 
     ```
-        # adding dependent executables : Step0
+        # Step 0 : adding dependent executables (CMakeLists.txt line:29)
         add_executable(${CMAKE_PROJECT_NAME} main.cpp dep1.cpp dep2.cpp)  
     ```
