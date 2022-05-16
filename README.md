@@ -1,11 +1,12 @@
-# rpp-m (rec-play-pause-micro)
- template repository for cross-platform cpp development based on CMake build system Resources
+# RPP-M (Rec-Play-Pause Micro)
+ Template repository for cross-platform cpp development based on CMake build system Resources
 
 > **NOTE :** This repository is tested only on MacOS and debian based Linux Distributions. Will be updated for Windows in the future.
 
 ### Who is this repository for?
 * If project based on CMakeLists build system.
 * If project contains only few source files like `main.cpp`, `mylib.cpp` etc.
+* If you need a C++ development laboratuary to test simple codes does not requires any 3Rd dependencies.
 
 ### Requirements:
 * Cmake
@@ -15,6 +16,7 @@
 
 ### Extras : 
 * `License.txt`, you can license your software by editing this file.
+
 ---
 
 ## Project Structure
@@ -113,6 +115,10 @@ target_include_directories(temp PUBLIC "${PROJECT_BINARY_DIR}")
 install(TARGETS temp DESTINATION bin)
 ```
 
+> Optionally, you can add new executable as a dependency of main.cpp like : 
+> ```
+> add_executable(${CMAKE_PROJECT_NAME} main.cpp temp.cpp)   
+> ```
 
 ## Extra Info
 
